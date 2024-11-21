@@ -5,20 +5,14 @@ import (
 	"errors"
 
 	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/serve/dlna"
-	"github.com/rclone/rclone/cmd/serve/docker"
-	"github.com/rclone/rclone/cmd/serve/ftp"
 	"github.com/rclone/rclone/cmd/serve/http"
-	"github.com/rclone/rclone/cmd/serve/nfs"
-	"github.com/rclone/rclone/cmd/serve/restic"
 	"github.com/rclone/rclone/cmd/serve/s3"
-	"github.com/rclone/rclone/cmd/serve/sftp"
-	"github.com/rclone/rclone/cmd/serve/webdav"
 	"github.com/spf13/cobra"
 )
 
 func init() {
 	Command.AddCommand(http.Command)
+	/*
 	if webdav.Command != nil {
 		Command.AddCommand(webdav.Command)
 	}
@@ -40,6 +34,7 @@ func init() {
 	if nfs.Command != nil {
 		Command.AddCommand(nfs.Command)
 	}
+	*/
 	if s3.Command != nil {
 		Command.AddCommand(s3.Command)
 	}
